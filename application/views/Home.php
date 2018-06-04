@@ -20,12 +20,12 @@ body {font-size:16px;}
     <h3 class="w3-padding-64"><b>Badan<br>Amal</b></h3>
   </div>
   <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
-    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Showcase</a> 
-    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a> 
-    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Designers</a> 
-    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Packages</a> 
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Data Badan Amal</a> 
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Profil Badan Amal</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"></a> 
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"></a> 
+    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"></a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"></a>
   </div>
 </nav>
 
@@ -43,24 +43,21 @@ body {font-size:16px;}
 
   <!-- Header -->
   <div class="w3-container" style="margin-top:80px" id="showcase">
-    <h1 class="w3-jumbo"><b>Interior Design</b></h1>
-    <h1 class="w3-xxxlarge w3-text-red"><b>Showcase.</b></h1>
+    <h1 class="w3-jumbo"><b>Badan Amal</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b></b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
   </div>
   
   <!-- Photo grid (modal) -->
   <div class="w3-row-padding">
     <div class="w3-half">
-      <img src="/w3images/kitchenconcrete.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
-      <img src="/w3images/livingroom.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
-      <img src="/w3images/diningroom.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
+      <img src="<?=base_url()?>/w3images/gambar1.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+      <img src="<?=base_url()?>/w3images/gambar2.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
     </div>
 
     <div class="w3-half">
-      <img src="/w3images/atrium.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
-      <img src="/w3images/bedroom.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
-      <img src="/w3images/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
-    </div>
+      <img src="<?=base_url()?>/w3images/gambar1.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+       <img src="<?=base_url()?>/w3images/gambar3.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
   </div>
 
   <!-- Modal for full size images on click-->
