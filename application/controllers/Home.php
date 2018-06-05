@@ -12,5 +12,9 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('Program');
 	}
+	public function about()
+	{
+		$this->load->view('About');
+	}
 
 }

@@ -13,40 +13,35 @@ body {font-size:16px;}
 </style>
 <body>
 
-<?php include('Header.php'); ?>
+<?php include('header.php'); ?>
 
 
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
-
-
   <div class="w3-container" style="margin-top:80px" id="showcase">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Profil</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Sejarah</b></h1>
+    <p></p>
     <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>Dompet Dhuafa adalah lembaga milik masyarakat Indonesia yang berkhidmat mengangkat harkat sosial kemanusiaan kaum dhuafa dengan dana. Dompet Dhuafa akan terus mewujudkan masyarakat berdaya yang bertumpu pada sumber daya lokal melalui sistem yang berkeadilan</p>
+     <p>Dompet Dhuafa adalah lembaga milik masyarakat Indonesia yang berkhidmat mengangkat harkat sosial kemanusiaan kaum dhuafa dengan dana. Dompet Dhuafa akan terus mewujudkan masyarakat berdaya yang bertumpu pada sumber daya lokal melalui sistem yang berkeadilan</p>
   </div>
 
-  <div class="w3-row-padding">
-    <div class="w3-half">
-      <img src="<?php echo base_url('w3images/gambar1.jpg'); ?>" style="width:100%" alt="">
-      <br>
-      <br>
-      <br>
-      <br>
-      <img src="<?php echo base_url('w3images/gambar10.jpg'); ?>" style="width:100%" alt="">
-    </div>
+  <div class="w3-main" style="margin-left:0px;margin-right:40px">
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Visi Misi</b></h1>
+    <p></p>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p><h3>Visi</h3>1. Terwujudnya masyarakat dunia yang berdaya melalui pelayanan, pembelaan dan pemberdayaan yang berbasis pada sistem yang berkeadilan<br><br>
+ 
+	<h3>Misi</h3>
+	1.Menjadi gerakan masyarakat yang mentransformasikan nilai-nilai kebaikan<br>
+	2.Mewujudkan masyarakat berdaya melalui pengembangan ekonomi kerakyatan<br>
+	3.Terlibat aktif dalam kegiatan kemanusiaan dunia melalui penguatan jaringan global<br>
+	4.Melahirkan Kader Pemimpin Berkarakter dan Berkompetensi Global”<br>
+	5.Melakukan advokasi kebijakan untuk mewujudkan sistem yg berkeadilan<br>
+	6.Mengembangkan diri sebagai organisasi global melalui inovasi, kualitas pelayanan, transparansi, akuntabilitas, indepedensi dan<br>kemandirian lembaga</p>
 
-    <div class="w3-half">
-      <img src="<?php echo base_url('w3images/gambar11.jpg'); ?>" style="width:100%" alt="">
-      <img src="<?php echo base_url('w3images/tes.png'); ?>" style="width:100%" alt="">
-  
-    </div>
-  </div>
-  
-
-
-<script>
+  <script>
 // Script to open and close sidebar
 function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
@@ -69,3 +64,4 @@ function onClick(element) {
 
 </body>
 </html>
+

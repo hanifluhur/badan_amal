@@ -13,22 +13,52 @@ body {font-size:16px;}
 </style>
 <body>
 
-<?php include('header.php'); ?>
+<?php include('Header.php'); ?>
 
 
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
-  <div class="w3-container" id="services" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Services.</b></h1>
+   <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Program Kerja</b></h1>
+    <p></p>
     <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
-    <p>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
   </div>
+  
+  <div class="w3-row-padding w3-grayscale">
+  <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="<?php echo base_url('w3images/gambar6.jpg'); ?>" alt="" style="width:100%">
+        <div class="w3-container">
+          <h3>Pendidikan</h3>
+          <p class="w3-opacity"></p>
+          <p>Masa depan Indonesia yang lebih baik ada di tangan anak-anak. Dompet Dhuafa membantu mewujudkannya dengan memberikan program beasiswa bagi anak-anak Indonesia yang tidak mampu.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="<?php echo base_url ('w3images/gambar8.jpg')?>" alt="" style="width:100%">
+        <div class="w3-container">
+          <h3>Kesehatan</h3>
+          <p class="w3-opacity"></p>
+          <p>Dompet Dhuafa di dalam program kesehatan, mendirikan berbagai lembaga kesehatan yang bertujuan untuk melayani seluruh mustahik dengan sistem yang mudah dan terintegrasi dengan sangat baik.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="<?php echo base_url ('w3images/gambar9.jpg')?>" alt="" style="width:100%">
+        <div class="w3-container">
+          <h3>Ekonomi</h3>
+          <p class="w3-opacity"></p>
+          <p>Untuk memutus lingkaran kemiskinan di Indonesia, Dompet Dhuafa merangkul masyarakat di seluruh daerah dengan berbagai program pemberdayaan, agar terciptanya entrepreneur dan lapangan kerja baru.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
 // Script to open and close sidebar
 function w3_open() {
