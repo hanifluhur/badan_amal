@@ -58,12 +58,6 @@ class Controller extends CI_Controller {
 		$this->load->view('admin',$data);	
 	}
 
-	public function mahasiswa()
-	{
-		$data["query"]=$this->Model->getProduk();
-		$this->load->view('mahasiswa',$data);	
-	}
-
 	public function biodata_donatur()
 	{
 		$data["query"]=$this->Model->getBiodata();
@@ -74,14 +68,6 @@ class Controller extends CI_Controller {
 	{
 		$data["query"]=$this->Model->getBiodata();
 		$this->load->view('biodata-donasi',$data);	
-	}
-
-
-	public function biodata_jq()
-	{
-		$data=$this->Model->getBiodata();
-		//$this->load->view('biodata-jq',$data);
-		echo json_encode($data);	
 	}
 
 	public function profil()
