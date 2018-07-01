@@ -23,19 +23,18 @@ class Controller extends CI_Controller {
 			$hasil = count($cek);
 			if($hasil > 0)
 			{
-				$in   = $this->db->get_where('biodata', array('username'=>$user, 'password' => $pass))->row();
+				$in   = $this->db->get_where('tb_investor', array('username'=>$user, 'password' => $pass))->row();
 				$data = array('udhmasuk'       => true, 
-							  'nama'		   => $in->nama, 
-							  'foto'           => $in->foto);
+							  'nama_investor'  => $in->nama_investor);
 				
 				$this->session->set_userdata($data);
-				if($in->id == '1000')
+				if($in->kd_investor == 'AB0000')
 				{
-					redirect(base_url('C_admin'));
+					redirect(base_url('Admin'));
 				}
 				else
 				{
-					redirect(base_url('C_mahasiswa'));
+					redirect(base_url('User'));
 				}
 			}
 			else

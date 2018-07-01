@@ -52,22 +52,103 @@
 								<li><a href="<?php echo base_url('Controller/sejarah'); ?>">Sejarah</a></li>
 								<li><a href="<?php echo base_url('Controller/visimisi'); ?>">Visi Misi</a></li>
 								<li><a href="<?php echo base_url('Controller/profil'); ?>">Profil</a></li>
+
 							</ul>
 						</li>
-							<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login<span class="caret"></span></a>
-						  <ul class="dropdown-menu">
-						    <?php echo form_open('Controller/login')?>
-						        <input type="text" class="form-control" placeholder="Username" name="user" autofocus>
-						        <input type="password" class="form-control" placeholder="Password" name="pass">
-						      <button type="submit" class="btn btn-default" name="login">Login</button>
-						    <?php echo form_close()?>
-						  </ul>
+							<li><a href="#" data-target="#my" data-toggle="modal" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login<span class="caret"></span></a>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
+<!-- Modal -->
+  <div class="modal fade" id="my" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+        
+          <form action="<?php echo base_url('Controller/login') ?>" method="POST" role="form">
+          <fieldset>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" id="usrname" name="user" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="password" class="form-control" id="psw" name="pass" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+              <button type="submit" name="login" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+              <button type="submit" class="btn btn-danger btn-default pull-left"  style="width: 499px" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          </fieldset>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <p>Not a member? <a href="#" data-target="#myDaftar" data-toggle="modal" data-dismiss="modal">Sign Up</a></p>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+
+  <!-- Modal -->
+  <div class="modal fade" id="myDaftar" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span>Pendaftaran</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+        
+          <form action="<?php echo base_url('Controller/login') ?>" method="POST" role="form">
+          <fieldset>
+           <div>
+	               <input class="form-control" placeholder="ID Pelanggan" type="text" name="id_pelanggan"><i style="color: red;"><?= form_error('id_pelanggan'); ?></i>
+              </div><br>
+	          	<div>
+	               <input class="form-control" placeholder="Nama" type="text" name="nama_pelanggan"><i style="color: red;"><?= form_error('nama_pelanggan'); ?></i>
+	          	</div><br>
+	          	<div>
+	            	  <input class="form-control" placeholder="Alamat" type="text" name="alamat"><i style="color: red;"><?= form_error('alamat'); ?></i>
+	          	</div><br>
+	          	<div>
+	            	  <input class="form-control" placeholder="Telepon" type="text" name="telepon"><i style="color: red;"><?= form_error('telepon'); ?></i>
+	          	</div><br>
+	          	<div>
+	            	  <input class="form-control" placeholder="Username" type="text" name="username"><i style="color: red;"><?= form_error('username'); ?></i>
+	          	</div><br>
+	          	<div>
+	            	  <input class="form-control" placeholder="Password" type="password" name="password"><i style="color: red;"><?= form_error('password'); ?></i>
+	          	</div><br>
+	          	<div>
+	            	  <input type="file" name="foto"><i style="color: red;"><?= form_error('foto'); ?></i>
+	          	</div><br>
+	            <div>
+	            	  <button type="submit" class="btn btn-md btn-info"> Daftar <span class="glyphicon glyphicon-floppy-save"></span></button>
+              </div>
+          </fieldset>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <p>Not a member? <a href="#" data-target="#my" data-toggle="modal">Sign Up</a></p>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
 
 		<!--carousel-->
 		<div class="container" style="margin-top: 60px; width: 100%;">

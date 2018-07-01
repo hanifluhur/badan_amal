@@ -18,6 +18,32 @@
     border: 0;
     font-color: #000000 ;
 }
+.form-signin {
+  width: 100%;
+  max-width: 300px;
+  padding: 15px;
+  margin: auto;
+}
+.button-flat-outline {
+  border: 1px solid #801515;
+  background: transparent;        
+  color: #801515;            
+  font-size: 16px;                 
+  padding: 0.5em 1em 0.5em 1em;   
+}
+.button-flat-outline:hover {
+  opacity: 0.8;                    
+}
+.button-flat-outline:active {
+  background: #550000;             
+  color: #FFFFFF;                   
+}
+.form-signin {
+  width: 100%;
+  max-width: 300px;
+  padding: 15px;
+  margin: auto;
+}
 body {
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.6;
