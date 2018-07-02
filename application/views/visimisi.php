@@ -76,10 +76,9 @@
 				<div class="container">
 					<br><br>
 					<h2>Visi</h2>
-					<br>
 					<p>Terwujudnya masyarakat dunia yang berdaya melalui pelayanan, pembelaan dan pemberdayaan yang berbasis pada sistem yang berkeadilan</p>
+					<br><br>
 					<h2>Misi</h2>
-					<br>
 					<p>1.Menjadi gerakan masyarakat yang mentransformasikan nilai-nilai kebaikan
 					<br>2.Mewujudkan masyarakat berdaya melalui pengembangan ekonomi kerakyatan
 					<br>3.Terlibat aktif dalam kegiatan kemanusiaan dunia melalui penguatan jaringan global

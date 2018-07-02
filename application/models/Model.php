@@ -6,9 +6,48 @@ class Model extends CI_Model {
 	public function login($user, $pass){
 		$this->db->where('username',$user);
 		$this->db->where('password',$pass);
-		return $this->db->get('tb_investor')->row();
+		return $this->db->get('tb_pendaftaran')->row();
 	}
  
+	//SELECT=======================================================
+	public function getInvestor(){
+		$this->db->select('tb_transaksi.*, tb_pendaftaran.*, tb_tempat.*');
+		$this->db->from('tb_transaksi');
+		$this->db->join('tb_pendaftaran','tb_pendaftaran.kd_investor = tb_transaksi.kd_investor');
+		$this->db->join('tb_tempat','tb_tempat.kd_tempat = tb_transaksi.kd_tempat');
+		$query = $this->db->get();
+		return $query->result();	
+	}
+
+	public function getTempat(){
+		$query = $this->db->get('tb_tempat');
+		return $query->result();
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	//SELECT=======================================================
 	public function getProduk(){
 		$query = $this->db->get('produk');

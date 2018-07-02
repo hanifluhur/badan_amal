@@ -69,19 +69,17 @@
 					</ul>
 				</div>
 			</div>
-		</nav
+		</nav>
 
-
-
+			<br><br>
 			<div class="container-fluid col-lg-12">
 			<div class="jumbotron">
 				<div class="container">
 					<br><br>
 					<center>
-					<h2>Sejarah</h2>
 					<br>
-					<img class="img-thumbnail" src="<?php echo base_url('assets/gambar1.jpg'); ?>">
 					<img class="img-thumbnail" src="<?php echo base_url('assets/gambar2.jpg'); ?>">
+					<img class="img-thumbnail" src="<?php echo base_url('assets/gambar1.jpg'); ?>">
 					<img class="img-thumbnail" src="<?php echo base_url('assets/gambar3.jpg'); ?>">
 					<br><br>
 					<h3>AWAL KEHADIRAN</h3>

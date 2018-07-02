@@ -22,5 +22,14 @@
 			$this->session->session_destroy();
 			redirect(base_url('Controller'));
 		}
+
+		public function investor(){
+			$data["query"]=$this->Model->getInvestor();
+			$this->load->view('user/investor',$data);
+		}
+		public function tempat(){
+			$data["query"]=$this->Model->getTempat();
+			$this->load->view('user/tempat',$data);
+		}
 	
 }

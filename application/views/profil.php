@@ -71,7 +71,7 @@
 		</nav
 
 
-
+			<br>
 			<div class="container-fluid col-lg-12">
 			<div class="jumbotron">
 				<div class="container">

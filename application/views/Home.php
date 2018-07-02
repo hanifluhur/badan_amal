@@ -115,25 +115,22 @@
           <form action="<?php echo base_url('Controller/login') ?>" method="POST" role="form">
           <fieldset>
            <div>
-	               <input class="form-control" placeholder="ID Pelanggan" type="text" name="id_pelanggan"><i style="color: red;"><?= form_error('id_pelanggan'); ?></i>
+	               <input class="form-control" placeholder="Kd Investor" type="text" name="kd_investor"><i style="color: red;"><?= form_error('kd_investor'); ?></i>
               </div><br>
 	          	<div>
-	               <input class="form-control" placeholder="Nama" type="text" name="nama_pelanggan"><i style="color: red;"><?= form_error('nama_pelanggan'); ?></i>
+	               <input class="form-control" placeholder="Nama" type="text" name="nama_investor"><i style="color: red;"><?= form_error('nama_investor'); ?></i>
 	          	</div><br>
 	          	<div>
 	            	  <input class="form-control" placeholder="Alamat" type="text" name="alamat"><i style="color: red;"><?= form_error('alamat'); ?></i>
 	          	</div><br>
 	          	<div>
-	            	  <input class="form-control" placeholder="Telepon" type="text" name="telepon"><i style="color: red;"><?= form_error('telepon'); ?></i>
+	            	  <input class="form-control" placeholder="Telepon" type="text" name="no_tlp"><i style="color: red;"><?= form_error('no_tlp'); ?></i>
 	          	</div><br>
 	          	<div>
 	            	  <input class="form-control" placeholder="Username" type="text" name="username"><i style="color: red;"><?= form_error('username'); ?></i>
 	          	</div><br>
 	          	<div>
 	            	  <input class="form-control" placeholder="Password" type="password" name="password"><i style="color: red;"><?= form_error('password'); ?></i>
-	          	</div><br>
-	          	<div>
-	            	  <input type="file" name="foto"><i style="color: red;"><?= form_error('foto'); ?></i>
 	          	</div><br>
 	            <div>
 	            	  <button type="submit" class="btn btn-md btn-info"> Daftar <span class="glyphicon glyphicon-floppy-save"></span></button>
@@ -192,7 +189,7 @@
 			</div><br>
 		</div>
 
-		<div id="fh5co-feature-product" class="fh5co-section-gray">
+		<div id="fh5co-features" fh5co-feature-product" class="fh5co-section-gray">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center heading-section">
@@ -201,19 +198,17 @@
 					</div>
 				</div>
 
-<div id="fh5co-features">
+<div id="fh5co-features" fh5co-feature-product">
 			<div class="container">
 				<div class="row">
+					<center><h1>Program Kerja</h1></center>
+						<br><br>
 					<div class="col-md-4">
-
 						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-profile-male"></i>
-							</span>
 							<div class="feature-copy">
 								<h3>Pendidikan</h3>
 								<p>Masa depan Indonesia yang lebih baik ada di tangan anak-anak. Dompet Dhuafa membantu mewujudkannya dengan memberikan program beasiswa bagi anak-anak Indonesia yang tidak mampu.</p>
-								<p><a href="pendidikan.php">Learn More</a></p>
+								<p><a href=""></a></p>
 							</div>
 						</div>
 
@@ -221,32 +216,30 @@
 
 					<div class="col-md-4">
 						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-happy"></i>
 							</span>
 							<div class="feature-copy">
 								<h3>Kesehatan</h3>
 								<p>Dompet Dhuafa di dalam program kesehatan, mendirikan berbagai lembaga kesehatan yang bertujuan untuk melayani seluruh mustahik dengan sistem yang mudah dan terintegrasi dengan sangat baik</p>
-								<p><a href="Controller/kesehatan">Learn More</a></p>
+								<p><a href=""></a></p>
 							</div>
 						</div>
 
 					</div>
 					<div class="col-md-4">
 						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-wallet"></i>
 							</span>
 							<div class="feature-copy">
 								<h3>Ekonomi</h3>
 								<p>Untuk memutus lingkaran kemiskinan di Indonesia, Dompet Dhuafa merangkul masyarakat di seluruh daerah dengan berbagai program pemberdayaan, agar terciptanya entrepreneur dan lapangan kerja baru</p>
-								<p><a href="pendidikan.php">Learn More</a></p>
+								<p><a href=""></a></p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+
 		
 		
 

@@ -6,7 +6,6 @@ class Controller extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Model');
-		$this->load->library('pagination');
 	}
 
 	public function index()
@@ -14,7 +13,7 @@ class Controller extends CI_Controller {
 		$this->load->view('home');
 	}
 
-	//LOGIN===========================================================================================================================
+	//LOGIN========================================================================================================
 	public function login(){
 		if(isset($_POST['login'])){
 			$user  = $this->input->post('user',true);
@@ -23,12 +22,12 @@ class Controller extends CI_Controller {
 			$hasil = count($cek);
 			if($hasil > 0)
 			{
-				$in   = $this->db->get_where('tb_investor', array('username'=>$user, 'password' => $pass))->row();
+				$in   = $this->db->get_where('tb_pendaftaran', array('username'=>$user, 'password' => $pass))->row();
 				$data = array('udhmasuk'       => true, 
 							  'nama_investor'  => $in->nama_investor);
 				
 				$this->session->set_userdata($data);
-				if($in->kd_investor == 'AB0000')
+				if($in->level == 'admin')
 				{
 					redirect(base_url('Admin'));
 				}
@@ -50,7 +49,25 @@ class Controller extends CI_Controller {
 		redirect('Controller');
 	}
 
-	//LOAD=================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//LOAD====================================================================================================================
 
 	public function admin()
 	{
