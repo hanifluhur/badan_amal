@@ -24,14 +24,34 @@ class Model extends CI_Model {
 		return $query->result();
 	}
 
+	//UPLOAD======================================================
+	function uploadPelanggan() {
+		$config['upload_path'] = './assets/foto/';
+		$config['allowed_types'] = 'jpg|png|jpeg';
+		$config['max_size'] = '204800';
+		$config['remove_space'] = true;
 
+		$this->load->library('upload', $config);
 
+		if ($this->upload->do_upload('foto')) {
+			$return = array('result' => 'success','file' => $this->upload->data(), 'error' => '');
+			return $return;
+		} else {
+			$return = array('result' => 'failed', 'file' => '', 'error' => $this->upload->display_errors());
+			return $return;
+		}
+	}
 
+	//INSERT======================================================
+	public function insert($table,$data){
+		$this->db->insert($table,$data);
+	}
 
-
-
-
-
+	public function profil($kd){
+		$sql = "SELECT*FROM tb_pendaftaran WHERE kd_investor='$kd' ";
+		$query = $this->db->query($sql);
+		return $query->num_rows();  
+	}
 
 
 

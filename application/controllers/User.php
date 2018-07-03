@@ -22,6 +22,11 @@
 			$this->session->session_destroy();
 			redirect(base_url('Controller'));
 		}
+		public function profil(){
+			$kd = $this->session->userdata('kd_investor');
+			$data['query'] = $this->Model->edit_data($kd,'tb_pendaftaran')->result();
+			$this->load->view('user/profil',$data);
+		}
 
 		public function investor(){
 			$data["query"]=$this->Model->getInvestor();
