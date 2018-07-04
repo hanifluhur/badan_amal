@@ -5,7 +5,7 @@
 		<?php $this->load->view('user/sub/menu'); ?>
 		<br><br><br><br><br><br>
 		<div class="jumbotron text-center">
-  		<h1>Badan Amal</h1> 
+  		<h1>Investor Badan Amal</h1> 
   		<p>Dompet Dhuafa</p> 
   		<div class="glyphicon glyphicon-heart logo-small"></div>
 

@@ -38,7 +38,7 @@
 							<li class="contact-item"> <span class="contact-icon"> <i class="fa fa-map-marker"></i></span>Polinema</li>
 							<li class="contact-item"> <span class="contact-icon"> <i class="fa fa-phone"></i></span>0812 3456 7890</li>
 
-							<li class="contact-item"> <span class="contact-icon"> <i class="fa fa-envelope"></i></span>dompetdhuafa@gmail.</li>
+							<li class="contact-item"> <span class="contact-icon"> <i class="fa fa-envelope"></i></span>dompetdhuafa@gmail.com</li>
 						</ul>
 					</div>
 

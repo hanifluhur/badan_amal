@@ -41,8 +41,6 @@
 
 					<p>
 						Hadir dalam acara itu Pemimpin Umum/Pemred Republika Parni Hadi, Dai Sejuta Umat, (alm) Zainuddin MZ dan Raja Penyanyi Dangdut H. Rhoma Irama dan awak pemasaran Republika. Memang, acara itu dikemas sebagai gabungan antara dakwah dan entertainment.
-
-						Turun dari panggung, rombongan Republika dari Jakarta diajak makan di restoran Bambu Kuning dan di situ bergabung teman-teman dari Corps Dakwah Pedesaan (CDP) di bawah pimpinan Ustadz Umar Sanusi dan binaan pegiat dakwah di daerah miskin Gunung Kidul, (Alm) Bapak Jalal Mukhsin.
 					</p>
 					
 				</div>

@@ -22,5 +22,18 @@
 			$this->session->session_destroy();
 			redirect(base_url('Controller'));
 		}
+
+		public function datapendaftaran(){
+			$data["query"]=$this->Model->getPendaftaran();
+			$this->load->view('admin/datapendaftaran',$data);
+		}
+		public function datalembaga(){
+			$data["query"]=$this->Model->getLembaga();
+			$this->load->view('admin/datalembaga',$data);
+		}
+		public function datadonasi(){
+			$data["query"]=$this->Model->getInvestor();
+			$this->load->view('admin/datadonasi',$data);
+		}
 	
 }

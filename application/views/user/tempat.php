@@ -4,48 +4,194 @@
 	<body>
 		<?php $this->load->view('user/sub/menu'); ?>
 
-		<!--tabel-->
-		<div class="container" style="margin-top: 80px;">
-			<div class="table-responsive">
-				<table id="tabel-data" class="table table-bordered table-striped table-hover">
-					<thead>
-						<tr>
-							<td>No</td>
-							<td>Kode Tempat</td>
-							<td>Nama Tempat</td>
-					        <td>Alamat</td>
-					        <td>Nama Pengurus</td>
-					        <td>Kontak</td>
+		<div class="main-container">
 
-						</tr>
-					</thead>
-					<tbody>
-						<?php 
-							$no = 0;
-							foreach ($query as $key) { 
-							$no++;
-						?>
-				  		<tr>
-				  			<td><?php echo $no ?></td>
-				          	<td><?php echo $key->kd_tempat ?></td> 
-				         	<td><?php echo $key->nama_tempat ?></td>
-				         	<td><?php echo $key->alamat ?></td> 
-				         	<td><?php echo $key->nama_pengurus ?></td> 
-				           	<td><?php echo $key->contact_p ?></td>            
-				          	      
-				        </tr>
-				        <?php } ?>
-					</tbody>
-				</table>
-			</div>
-		</div><br>
+		<div class="our-causes fadeIn animated">
 
-  		<!-- jQuery -->
-		<script src="//code.jquery.com/jquery.js"></script>
-		<!-- Bootstrap JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	        <div class="container">
 
-</div>
+	            <h2 class="title-style-1">LEMBAGA DONASI<span class="title-under"></span></h2>
+
+	            <div class="row">
+
+	      				
+		                <div class="col-md-4 col-sm-4">
+
+		                    <div class="cause">
+
+		                        <img src="<?php echo base_url('assets/images/causes/11.jpg'); ?>" alt="" class="cause-img">
+
+		                        <div class="progress cause-progress">
+		                          <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+		                            10$ / 500$
+		                          </div>
+		                        </div>
+
+		                        <h4 class="cause-title"><a href="#">PEMBAGUNAN MASJID DARUL HIKMAH</a></h4>
+
+		                        <div class="btn-holder text-center">
+
+		                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal"> DONATE NOW</a>
+		                          
+		                        </div>
+
+		                        
+
+		                    </div> <!-- /.cause -->
+		                    
+		                </div> 
+
+		                <div class="col-md-4 col-sm-4">
+
+		                    <div class="cause">
+
+		                        <img src="<?php echo base_url('assets/images/causes/image.jpg'); ?>" alt="" class="cause-img">
+
+		                        <div class="progress cause-progress">
+		                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+		                            400$ / 700$
+		                          </div>
+		                        </div>
+
+		                        <h4 class="cause-title"><a href="#">PEMBAGUNAN MASJID AL-IKHLAS </a></h4>
+		                       
+
+		                        <div class="btn-holder text-center">
+
+		                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal"> DONATE NOW</a>
+		                          
+		                        </div>
+
+		                        
+
+		                    </div> <!-- /.cause -->
+		                    
+		                </div>
+
+
+		                <div class="col-md-4 col-sm-4">
+
+		                    <div class="cause">
+
+		                        <img src="<?php echo base_url('assets/images/causes/img.jpg'); ?>" alt="" class="cause-img">
+
+		                        <div class="progress cause-progress">
+		                          <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+		                            400$ / 1000$
+		                          </div>
+		                        </div>
+
+		                        <h4 class="cause-title"><a href="#">PEMBAGUNAN MASJID AL-MADINAH</a></h4>
+
+		                        <div class="btn-holder text-center">
+
+		                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal"> DONATE NOW</a>
+		                          
+		                        </div>
+
+		                        
+
+		                    </div> <!-- /.cause -->
+		                    
+		                </div>
+
+		                <div class="col-md-4 col-sm-4">
+
+		                    <div class="cause">
+
+		                        <img src="assets/images/causes/cause-hunger.jpg" alt="" class="cause-img">
+
+		                        <div class="progress cause-progress">
+		                          <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+		                            10$ / 500$
+		                          </div>
+		                        </div>
+
+		                        <h4 class="cause-title"><a href="#">PANTI ASUHAN AL-JANNAH</a></h4>
+		                      
+
+		                        <div class="btn-holder text-center">
+
+		                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal"> DONATE NOW</a>
+		                          
+		                        </div>
+
+		                        
+
+		                    </div> <!-- /.cause -->
+		                    
+		                </div> 
+
+		                <div class="col-md-4 col-sm-4">
+
+		                    <div class="cause">
+
+		                        <img src="assets/images/causes/cause-education.jpg" alt="" class="cause-img">
+
+		                        <div class="progress cause-progress">
+		                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+		                            400$ / 700$
+		                          </div>
+		                        </div>
+
+		                        <h4 class="cause-title"><a href="#">AL-HIKMAH(bantuan korban perang)</a></h4>
+		                       
+		                        <div class="btn-holder text-center">
+
+		                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal"> DONATE NOW</a>
+		                          
+		                        </div>
+
+		                        
+
+		                    </div> <!-- /.cause -->
+		                    
+		                </div>
+
+
+		                <div class="col-md-4 col-sm-4">
+
+		                    <div class="cause">
+
+		                        <img src="assets/images/causes/cause-rights.jpg" alt="" class="cause-img">
+
+		                        <div class="progress cause-progress">
+		                          <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+		                            400$ / 1000$
+		                          </div>
+		                        </div>
+
+		                        <h4 class="cause-title"><a href="#">DONASI FAKIR MISKIN</a></h4>
+		                   
+
+		                        <div class="btn-holder text-center">
+
+		                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal"> DONATE NOW</a>
+		                          
+		                        </div>
+
+		                        
+
+		                    </div> <!-- /.cause -->
+		                    
+		                </div>
+
+		                <div class="col-md-3 col-sm-6">
+		                        
+
+		                    </div> <!-- /.cause -->
+		                    
+		                </div>
+
+
+	            </div>
+
+	         </div>
+	        
+	    </div> <!-- /.our-causes -->
+	</div>
+
+
+ <?php $this->load->view('footer'); ?>	
 </body>
 </html>

@@ -41,24 +41,6 @@ class Controller extends CI_Controller {
 		$this->load->view('pendaftaran');
 	}
 
-	public function admin()
-	{
-		$data["query"]=$this->Model->getBiodata();
-		$this->load->view('admin',$data);	
-	}
-
-	public function biodata_donatur()
-	{
-		$data["query"]=$this->Model->getBiodata();
-		$this->load->view('biodata-donatur',$data);	
-	}
-
-	public function biodata_donasi()
-	{
-		$data["query"]=$this->Model->getBiodata();
-		$this->load->view('biodata-donasi',$data);	
-	}
-	
 
 	//LOGIN========================================================================================================
 	public function login(){
@@ -136,69 +118,6 @@ class Controller extends CI_Controller {
 	}
 
 	//BIODATA CRUD================================================================================================================================
-
-	public function tambah_bio()
-	{
-		$data['jurusan'] = $this->Model->view();
-		$this->load->view('tambah', $data);
-	}
-
-
-	//insert no upload
-	public function tambah_aksi(){
-		$id = $this->input->post('id');
-		$nama = $this->input->post('nama');
-		$jurusan = $this->input->post('jurusan');
-		$nim = $this->input->post('nim');
-		$alamat = $this->input->post('alamat');
-		$foto = $this->input->post('foto');
-		$tempat = $this->input->post('tempat');
-		$tgl_lahir = $this->input->post('tgl_lahir');
-
-		$data = array(
-			'id' => $id,
-			'nama' => $nama,
-			'id_jurusan' => $jurusan,
-			'nim' => $nim,
-			'alamat' => $alamat,
-			'foto' => $foto,
-			'tempat' => $tempat,
-			'tgl_lahir' => $tgl_lahir
-			);
-
-		$this->Model->input_data($data,'biodata');
-		redirect('Controller/biodata_javascript');
-	}
-
-	//insert upload
-	public function input() {
-		$data = array();
-		$this->load->library("form_validation");
-		$this->form_validation->set_rules('nama','Nama','trim|required');
-		$this->form_validation->set_rules('nim','nim','required');
-		if ($this->form_validation->run()==false) {
-			$this->load->view('tambah');
-		} else {
-			$this->load->model('Model');
-			$upload = $this->Model->upload();
-			if ($upload['result'] == "success") {
-				$dataMhs = array(
-					'id'	=>	$this->input->post('id'),
-					'nama'	=>	$this->input->post('nama'),
-					'id_jurusan'	=>	$this->input->post('jurusan'),
-					'nim'	=>	$this->input->post('nim'),
-					'alamat'	=>	$this->input->post('alamat'),
-					'tempat'	=>	$this->input->post('tempat'),
-					'tgl_lahir'	=>	$this->input->post('tgl_lahir'),
-					'foto'	=> $upload['file']['file_name']);
-
-				$this->db->insert('biodata',$dataMhs);
-				redirect('Controller/biodata_javascript');
-			} else {
-				$data['message'] = $upload['error'];
-			}
-		}
-	}
 
 	public function edit($id){
 		$where = array('id' => $id);
