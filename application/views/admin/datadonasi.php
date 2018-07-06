@@ -41,7 +41,7 @@
 					</tbody>
 				</table>
 			</div>
-		</div><br>
+		</div><br><br><br><br><br><br><br><br><br><br><br>
 
 <?php $this->load->view('footer'); ?>	
 

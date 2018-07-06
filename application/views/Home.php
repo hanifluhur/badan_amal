@@ -24,9 +24,10 @@
 
                 <div class="carousel-caption">
 
-                  <h2 class="carousel-title bounceInDown animated slow">Because they need your help</h2>
-                  <h4 class="carousel-subtitle bounceInUp animated slow ">Do not let them down</h4>
-                  <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated slow" data-toggle="modal" data-target="#donateModal">DONATE NOW</a>
+                  <h2 class="carousel-title bounceInDown animated slow">KARENA MEREKA MEMBUTUHKAN BANTUANMU</h2>
+                  <h4 class="carousel-subtitle bounceInUp animated slow ">
+                      JANGAN BIARKAN MEREKA JATUH! </h4>
+                  <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated slow" data-toggle="modal" data-target="#donateModal">DONASI</a>
 
                 </div> <!-- /.carousel-caption -->
 
@@ -43,9 +44,10 @@
 
                 <div class="carousel-caption">
 
-                  <h2 class="carousel-title bounceInDown animated slow">Together we can improve their lives</h2>
-                  <h4 class="carousel-subtitle bounceInUp animated slow"> So let's do it !</h4>
-                  <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated" data-toggle="modal" data-target="#donateModal">DONATE NOW</a>
+                  <h2 class="carousel-title bounceInDown animated slow">
+                      BERSAMA KITA BISA MENINGKATKAN HIDUP MEREKA </h2>
+                  <h4 class="carousel-subtitle bounceInUp animated slow"> JADI LAKUKAN! </h4>
+                  <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated" data-toggle="modal" data-target="#donateModal">DONASI</a>
 
                 </div> <!-- /.carousel-caption -->
 
@@ -64,9 +66,9 @@
 
                 <div class="carousel-caption">
 
-                  <h2 class="carousel-title bounceInDown animated slow" >A penny is a lot of money, if you have not got a penny.</h2>
-                  <h4 class="carousel-subtitle bounceInUp animated slow">You can make the diffrence !</h4>
-                  <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated slow" data-toggle="modal" data-target="#donateModal">DONATE NOW</a>
+                  <h2 class="carousel-title bounceInDown animated slow" >SISIHKAN SEBAGIAN HARTA UNTUK HAK MEREKA</h2>
+                  <h4 class="carousel-subtitle bounceInUp animated slow">ANDA BISA MEMBUAT PERUBAHAN!</h4>
+                  <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated slow" data-toggle="modal" data-target="#donateModal">DONASI</a>
 
                 </div> <!-- /.carousel-caption -->
 
@@ -94,7 +96,7 @@
 				<div class="row">
 					<div class="col-md-12 text-center heading-section">
 						 <h2 class="title-style-1">Dompet Dhuafa<span class="title-under"></span></h2>
-						<h4 class="center-justify">Dompet Dhuafa adalah lembaga milik masyarakat Indonesia yang berkhidmat mengangkat harkat sosial kemanusiaan kaum dhuafa dengan dana. Dompet Dhuafa akan terus mewujudkan masyarakat berdaya yang bertumpu pada sumber daya lokal melalui sistem yang berkeadilan</h4>
+						<h4 class="center-justify">Dompet Dhuafa adalah lembaga milik masyarakat Indonesia yang berkhidmat mengangkat harkat sosial kemanusiaan kaum dhuafa. Dompet Dhuafa akan terus mewujudkan masyarakat berdaya yang bertumpu pada sumber daya lokal melalui sistem yang berkeadilan</h4>
 					</div>
 				</div>
 			</div>
@@ -166,10 +168,10 @@
                         <div class="col-icon-wrapper">
                           <img src="assets/images/icons/our-mission-icon.png" alt="">
                         </div>
-                        <h3 class="col-title">Kesenjagan Sosial</h3>
+                        <h3 class="col-title">Sosial</h3>
                         <div class="col-details">
 
-                          <p>Mendirikan berbagai lembaga kesenjangan sosial  yang bertujuan untuk melayani seluruh mustahik dengan sistem yang mudah dan terintegrasi dengan sangat baik</p>
+                          <p>Mendirikan berbagai lembaga sosial  yang bertujuan untuk melayani seluruh mustahik dengan sistem yang mudah dan terintegrasi dengan sangat baik</p>
                           
                         </div>
                     

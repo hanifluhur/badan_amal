@@ -38,7 +38,9 @@ class Controller extends CI_Controller {
 		$this->load->view('visimisi');	
 	}
 	public function halaman_daftar(){
-		$this->load->view('pendaftaran');
+	//id otomatiss-----------------------------------------------------------
+		$data['id_pendaftaran'] = $this->Model->kd_investor();
+		$this->load->view('pendaftaran', $data);
 	}
 
 
@@ -74,13 +76,14 @@ class Controller extends CI_Controller {
 		}
 	}
 
+	//LOGOUT
 	public function logout(){
 		$this->session->sess_destroy();
 		redirect('Controller');
 	}
 
 
-	//insert upload
+	//INSERT UPLOAD
 	public function pendaftaran() {
 		$data = array();
 		$this->load->library("form_validation");
@@ -110,58 +113,79 @@ class Controller extends CI_Controller {
 					'foto'			=>  $upload['file']['file_name']);
 
 				$this->db->insert('tb_pendaftaran',$dataPelanggan);
-				redirect('Controller');
+				redirect('Controller/halaman_daftar');
 			} else {
 				echo "gagal bossssss !!!!";
 			}
 		}
 	}
 
-	//BIODATA CRUD================================================================================================================================
+	//DATA CRUD INVESTOR================================================================================================================================
 
-	public function edit($id){
-		$where = array('id' => $id);
-		$data['biodata'] = $this->Model->edit_data($where,'biodata')->result();
-		//dropdown
-		$data['jurusan'] = $this->Model->view();
+	public function get_update_investor($kd_investor){
+		$where = array('kd_investor' => $kd_investor);
+		$data ['query'] = $this->Model->get_update($where,'tb_pendaftaran')->result();
 
-		$this->load->view('edit',$data);
-
+		$this->load->view('admin/edit_data_investor',$data);
 	}
 
-	public function update(){
-		$id = $this->input->post('id');
-		$nama = $this->input->post('nama');
-		$jurusan = $this->input->post('jurusan');
-		$nim = $this->input->post('nim');
-		$alamat = $this->input->post('alamat');
-		$foto = $this->input->post('foto');
-		$tempat = $this->input->post('tempat');
-		$tgl_lahir = $this->input->post('tgl_lahir');
+	public function update_investor(){
+			$data = array(
+				'nama_investor' => $this->input->post('nama_investor'),
+				'alamat' 		=> $this->input->post('alamat'),
+				'no_tlp' 		=> $this->input->post('no_tlp'),
+				'foto' 			=> $this->input->post('foto')
+			);
+			$where = array(
+				'kd_investor' => $this->input->post('kd_investor')
+			);
+			$this->Model->update($where,$data,'tb_pendaftaran');
+			redirect('admin/datapendaftaran');
+
+		}
+
 	 
-		$data = array(
-			'nama' => $nama,
-			'id_jurusan' => $jurusan,
-			'nim' => $nim,
-			'alamat' => $alamat,
-			'foto' => $foto,
-			'tempat' => $tempat,
-			'tgl_lahir' => $tgl_lahir
-		);
-	 
-		$where = array(
-			'id' => $id
-		);
-	 
-		$this->Model->update_data($where,$data,'biodata');
-		redirect('Controller/biodata_javascript');
+	public function hapus_investor($kd_investor){
+		$where = array('kd_investor' => $kd_investor);
+		$this->Model->hapus_investor($where,'tb_pendaftaran');
+		redirect('admin/datapendaftaran');
 	}
 
-	public function hapus($id){
-		$where = array('id' => $id);
-		$this->Model->hapus_data($where,'biodata');
-		redirect('Controller/biodata_javascript');
+	//DATA CRUD TEMPAT================================================================================================================================
+
+	public function get_update_tempat($kd_tempat){
+		$where = array('kd_tempat' => $kd_tempat);
+		$data ['query'] = $this->Model->get_update($where,'tb_tempat')->result();
+
+		$this->load->view('admin/edit_data_tempat',$data);
 	}
+
+	public function update_tempat(){
+			$data = array(
+				'nama_tempat' 		=> $this->input->post('nama_tempat'),
+				'alamat' 			=> $this->input->post('alamat'),
+				'nama_pengurus' 	=> $this->input->post('nama_pengurus'),
+				'contact' 			=> $this->input->post('contact_p'),
+				'gambar' 				=> $this->input->post('gambar')
+			);
+			$where = array(
+				'kd_tempat' => $this->input->post('kd_tempat')
+			);
+			$this->Model->update($where,$data,'tb_tempat');
+			redirect('admin/datalembaga');
+
+		}
+
+
+
+
+	public function hapus_tempat($kd_tempat){
+		$where = array('kd_tempat' => $kd_tempat);
+		$this->Model->hapus_tempat($where,'tb_tempat');
+		redirect('admin/datalembaga');
+	}
+
+
 
 
 	

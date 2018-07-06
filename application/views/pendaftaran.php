@@ -8,7 +8,7 @@
 		<?= form_open_multipart('Controller/pendaftaran');  ?>
 		  <fieldset>
 		   <div>
-		           <input class="form-control" placeholder="Kd Investor" type="text" name="kd_investor"><i style="color: red;"><?= form_error('kd_investor'); ?></i>
+		           <input class="form-control" placeholder="Kd Investor" type="text" name="kd_investor" value="<?php echo $id_pendaftaran ?>" readonly><i style="color: red;"><?= form_error('kd_investor'); ?></i>
 		      </div><br>
 		      	<div>
 		           <input class="form-control" placeholder="Nama" type="text" name="nama_investor"><i style="color: red;"><?= form_error('nama_investor'); ?></i>
