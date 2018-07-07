@@ -113,7 +113,7 @@
                          <li class="submenu-item"><a href="<?php echo base_url('Controller/profil'); ?>">Contact</a></li>
                       </ul>
 
-                    <li class="has-child"><a href="#">DATA CHARITY</a>
+                    <li class="has-child"><a href="#">DATA DONASI</a>
 
                       <ul class="submenu">
                          <li class="submenu-item"><a href="<?php echo base_url('Controller/biodata_donasi'); ?>"> Data Investor</a></li>

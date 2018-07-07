@@ -59,9 +59,9 @@
                   <ul class="nav navbar-nav">
 
                     <li><a class="is-active" href="<?php echo base_url('User'); ?>">HOME</a></li>
+                    <li><a href="<?php echo site_url('User/tempat')?>">DONATE</a></li>
                     <li><a href="<?php echo site_url('User/investor')?>">INVESTOR</a></li>
-					<li><a href="<?php echo site_url('User/tempat')?>">DONATE</a></li>
-					<li class="has-child"><a href="#"><b>WELCOME INVESTOR, </b><?php echo $this->session->userdata('nama_investor') ?> <b class="caret"></b></a>
+					          <li class="has-child"><a href="#"><b>WELCOME INVESTOR, </b><?php echo $this->session->userdata('nama_investor') ?> <b class="caret"></b></a>
                     
                      <ul class="submenu">
                          <li class="submenu-item"><a href="<?php echo base_url('User/profil'); ?>">Profil</a></li>

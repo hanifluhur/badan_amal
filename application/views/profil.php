@@ -28,14 +28,14 @@
 
 				<div class="col-md-4 col-md-offset-1 col-contact">
 
-					<h2 class="title-style-2">Contact Us<span class="title-under"></span></h2>
+					<h2 class="title-style-2">Contact<span class="title-under"></span></h2>
 					<p>
 						<b>Dompet Dhuafa</b> adalah lembaga milik masyarakat Indonesia yang berkhidmat mengangkat harkat sosial kemanusiaan kaum dhuafa dengan dana</p>
 
 					<div class="contact-items">
 
 						<ul class="list-unstyled contact-items-list">
-							<li class="contact-item"> <span class="contact-icon"> <i class="fa fa-map-marker"></i></span>Polinema</li>
+							<li class="contact-item"> <span class="contact-icon"> <i class="fa fa-map-marker"></i></span>MALANG</li>
 							<li class="contact-item"> <span class="contact-icon"> <i class="fa fa-phone"></i></span>0812 3456 7890</li>
 
 							<li class="contact-item"> <span class="contact-icon"> <i class="fa fa-envelope"></i></span>dompetdhuafa@gmail.com</li>

@@ -24,8 +24,8 @@ class Model extends CI_Model {
 		return $query->result();
 	}
 
-	public function getPendaftaran(){
-		return $this->db->get('tb_pendaftaran')->result();
+	public function getPendaftaran($where,$table){
+		return $this->db->get_where($table,$where);
 	}
 	public function getLembaga(){
 		return $this->db->get('tb_tempat')->result();
@@ -43,6 +43,23 @@ class Model extends CI_Model {
 		$this->load->library('upload', $config);
 
 		if ($this->upload->do_upload('foto')) {
+			$return = array('result' => 'success','file' => $this->upload->data(), 'error' => '');
+			return $return;
+		} else {
+			$return = array('result' => 'failed', 'file' => '', 'error' => $this->upload->display_errors());
+			return $return;
+		}
+	}
+
+	function uploadTempat() {
+		$config['upload_path'] = './assets/foto/';
+		$config['allowed_types'] = 'jpg|png|jpeg';
+		$config['max_size'] = '204800';
+		$config['remove_space'] = true;
+
+		$this->load->library('upload', $config);
+
+		if ($this->upload->do_upload('gambar')) {
 			$return = array('result' => 'success','file' => $this->upload->data(), 'error' => '');
 			return $return;
 		} else {
@@ -82,9 +99,29 @@ class Model extends CI_Model {
 		return $kodejadi;
 	}
 
-	//DATA CRUD INVESTOR================================================================================================================================
+	public function kd_tempat(){
+		$this->db->select('Right(kd_tempat,3) as kode',false);
+		$this->db->order_by('kd_tempat', 'desc');
+		$this->db->limit(1);
+		$query = $this->db->get('tb_tempat');
 
-	public function hapus_investor($where,$table){
+		if($query->num_rows()<>0)
+		{
+			$data = $query->row();
+			$kode = intval($data->kode)+1;
+		}
+		else
+		{
+		 	$kode = 1;
+		}
+		$kodemax = str_pad($kode,3,"0",STR_PAD_LEFT);
+		$kodejadi = "AA".$kodemax;
+		return $kodejadi;
+	}
+
+	//DATA CRURD ADMIN INVESTOR ================================================================================================================
+
+	public function hapus_tempat($where,$table){
 		$this->db->where($where);
 		$this->db->delete($table);
 	}
@@ -98,14 +135,13 @@ class Model extends CI_Model {
 	}
 	
 
-	//DATA CRUD TEMPAT================================================================================================================================
-
-	public function hapus_tempat($where,$table){
+	//DATA CRUD TRANSAKSI================================================================================================================================
+	public function hapus_transaksi($where,$table){
 		$this->db->where($where);
 		$this->db->delete($table);
-
-
 	}
+	
+
 }
 /* End of file Model.php */
 /* Location: ./application/models/Model.php */

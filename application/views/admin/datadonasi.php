@@ -29,12 +29,12 @@
 				  		<tr>
 				  			<td><?php echo $no ?></td>
 				          	<td><?php echo $key->kd_transaksi ?></td> 
-				         	<td><?php echo $key->nama_investor ?></td>
-				         	<td><?php echo $key->nama_tempat?></td> 
-				         	<td><?php echo $key->nominal?></td> 
+				         	<td><?php echo $key->kd_investor ?></td>
+				         	<td><?php echo $key->kd_tempat ?></td> 
+				         	<td><?php echo $key->nominal ?></td> 
 				           	<td><?php echo $key->tgl_transaksi?></td>
-				           	<td><a href="<?php echo base_url("index.php/Pegawai/update/". $key->kd_transaksi) ?>" class="btn btn-sm  btn-danger active">Edit</a>
-                			<a href="<?php echo base_url("index.php/Pegawai/deleteData/". $key->kd_transaksi ) ?>" class="btn btn-sm btn-success active">Hapus</a></td>            
+				           	<td><a href="<?php echo base_url("Admin/get_update_transaksi/".$key->kd_transaksi) ?>" class="btn btn-sm  btn-danger active">Edit</a>
+                			<a href="<?php echo base_url("Admin/hapus_transaksi/".$key->kd_transaksi ) ?>" class="btn btn-sm btn-success active">Hapus</a></td>            
 				          	      
 				        </tr>
 				        <?php } ?>

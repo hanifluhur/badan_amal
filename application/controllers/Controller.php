@@ -17,18 +17,6 @@ class Controller extends CI_Controller {
 	{
 		$this->load->view('profil');	
 	}
-	function pendidikan()
-	{
-		$this->load->view('pendidikan');
-	}
-	public function kesehatan()
-	{
-		$this->load->view('kesehatan');	
-	}
-	public function kemiskinan()
-	{
-		$this->load->view('kemiskinan');	
-	}
 	public function sejarah()
 	{
 		$this->load->view('sejarah');	
@@ -120,35 +108,36 @@ class Controller extends CI_Controller {
 		}
 	}
 
-	//DATA CRUD INVESTOR================================================================================================================================
+	public function tambah_data_tempat() {
+		$data = array();
+		$this->load->library("form_validation");
 
-	public function get_update_investor($kd_investor){
-		$where = array('kd_investor' => $kd_investor);
-		$data ['query'] = $this->Model->get_update($where,'tb_pendaftaran')->result();
+		$this->form_validation->set_rules('kd_tempat','kode kode tempat','trim|required');
+		$this->form_validation->set_rules('nama_tempat','nama tempat','required');
+		$this->form_validation->set_rules('alamat','alamat','required');
+			$this->form_validation->set_rules('nama_pengurus','nama pengurus','required');
+		$this->form_validation->set_rules('contact_p','no telepon','required');
+		if ($this->form_validation->run()==false) 
+		{
+			$this->load->view('datalembaga');
+		}else 
+		{
+			$upload = $this->Model->uploadTempat();
+			if ($upload['result'] == "success") {
+				$dataPelanggan = array(
+					'kd_tempat'	=>	$this->input->post('kd_investor'),
+					'nama_tempat'	=>	$this->input->post('nama_investor'),
+					'alamat'		=>	$this->input->post('alamat'),
+					'nama_tempat'	=>	$this->input->post('nama_investor'),
+					'contact_p'		=>	$this->input->post('contact_p'),
+					'gambar'		=>  $upload['file']['file_name']);
 
-		$this->load->view('admin/edit_data_investor',$data);
-	}
-
-	public function update_investor(){
-			$data = array(
-				'nama_investor' => $this->input->post('nama_investor'),
-				'alamat' 		=> $this->input->post('alamat'),
-				'no_tlp' 		=> $this->input->post('no_tlp'),
-				'foto' 			=> $this->input->post('foto')
-			);
-			$where = array(
-				'kd_investor' => $this->input->post('kd_investor')
-			);
-			$this->Model->update($where,$data,'tb_pendaftaran');
-			redirect('admin/datapendaftaran');
-
+				$this->db->insert('tb_pendaftaran',$dataPelanggan);
+				redirect('Controller/halaman_daftar');
+			} else {
+				echo "gagal bossssss !!!!";
+			}
 		}
-
-	 
-	public function hapus_investor($kd_investor){
-		$where = array('kd_investor' => $kd_investor);
-		$this->Model->hapus_investor($where,'tb_pendaftaran');
-		redirect('admin/datapendaftaran');
 	}
 
 	//DATA CRUD TEMPAT================================================================================================================================
@@ -162,10 +151,10 @@ class Controller extends CI_Controller {
 
 	public function update_tempat(){
 			$data = array(
-				'nama_tempat' 		=> $this->input->post('nama_tempat'),
-				'alamat' 			=> $this->input->post('alamat'),
-				'nama_pengurus' 	=> $this->input->post('nama_pengurus'),
-				'contact' 			=> $this->input->post('contact_p'),
+				'nama_tempat' 			=> $this->input->post('nama_tempat'),
+				'alamat' 				=> $this->input->post('alamat'),
+				'nama_pengurus' 		=> $this->input->post('nama_pengurus'),
+				'contact_p' 			=> $this->input->post('contact_p'),
 				'gambar' 				=> $this->input->post('gambar')
 			);
 			$where = array(
@@ -176,14 +165,14 @@ class Controller extends CI_Controller {
 
 		}
 
-
-
-
+	 
 	public function hapus_tempat($kd_tempat){
 		$where = array('kd_tempat' => $kd_tempat);
 		$this->Model->hapus_tempat($where,'tb_tempat');
 		redirect('admin/datalembaga');
 	}
+
+	//DATA CRUD TRANSAKSI================================================================================================================================
 
 
 

@@ -5,9 +5,6 @@
 		<?php $this->load->view('Admin/sub/menu'); ?>
 
 		<!--tabel-->
-		<div class="container" style="margin-top: 60px;">
-			<a class="btn btn-primary" href="<?php echo base_url('Controller'); ?>" role="button">
-					<span class="glyphicon glyphicon-plus" aria-hidden="true"> Tambah</span> </a>
 		<div class="container" style="margin-top: 80px;">
 			<div class="table-responsive">
 				<table id="tabel-data" class="table table-bordered table-striped table-hover">
@@ -20,7 +17,6 @@
 					        <td>No Telepon</td>
 					        <td>Level</td>
 					        <td>Foto</td>
-					        <td>Aksi</td>
 
 						</tr>
 					</thead>
@@ -37,9 +33,7 @@
 				         	<td><?php echo $key->alamat ?></td> 
 				         	<td><?php echo $key->no_tlp ?></td> 
 				         	<td><?php echo $key->level ?></td> 
-				           	<td><img class="foto" src="<?php echo base_url('assets/foto/') ?><?php echo $key->foto ?>"></td>
-				           	<td><a href="<?php echo base_url("Controller/get_update_investor/". $key->kd_investor) ?>" class="btn btn-sm  btn-success active">Edit</a>
-                			<a href="<?php echo base_url("Controller/hapus_investor/". $key->kd_investor ) ?>" class="btn btn-sm btn-danger active">Hapus</a></td>         
+				           	<td><img class="foto" src="<?php echo base_url('assets/foto/') ?><?php echo $key->foto ?>"></td>        
 				          	      
 				        </tr>
 				        <?php } ?>
@@ -48,12 +42,13 @@
 			</div>
 		</div>
 	</div>
-		<br>
+</div><br><br><br><br><br><br><br><br><br><br><br>
+	
 
 <?php $this->load->view('footer'); ?>	
 <style type="text/css">
 	.foto{ width: 100px; }
+
 </style>
-</div>
 </body>
 </html>

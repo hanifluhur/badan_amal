@@ -21,7 +21,7 @@
 
 				<div class="col-md-6">
 
-					<img src="<?php echo base_url('assets/a.jpg'); ?>" alt="" class="img-responsive ">
+					<img src="<?php echo base_url('assets/images/logo.jpg'); ?>" alt="" class="img-responsive ">
 
 				</div>
 

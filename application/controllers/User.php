@@ -23,8 +23,8 @@
 			redirect(base_url('Controller'));
 		}
 		public function profil(){
-			$kd = $this->session->userdata('kd_investor');
-			$data['query'] = $this->Model->edit_data($kd,'tb_pendaftaran')->result();
+			$kd = array('kd_investor' => $this->session->userdata('kd_investor'));
+			$data['query'] = $this->Model->getPendaftaran($kd,'tb_pendaftaran')->result();
 			$this->load->view('user/profil',$data);
 		}
 
@@ -35,6 +35,33 @@
 		public function tempat(){
 			$data["query"]=$this->Model->getTempat();
 			$this->load->view('user/tempat',$data);
+		}
+
+		//DATA UPDATE INVESTOR================================================================================================================================
+
+	public function get_update_investor($kd_investor){
+		$where = array('kd_investor' => $kd_investor);
+		$data ['query'] = $this->Model->get_update($where,'tb_pendaftaran')->result();
+
+		$this->load->view('user/profil',$data);
+	}
+
+	public function update_investor(){
+			$data = array(
+				'nama_investor' 		=> $this->input->post('nama_investor'),
+				'alamat' 				=> $this->input->post('alamat'),
+				'no_tlp' 				=> $this->input->post('no_tlp'),
+				'username' 				=> $this->input->post('username'),
+				'password' 				=> $this->input->post('password'),
+				'level' 				=> $this->input->post('level'),
+				'level' 				=> $this->input->post('foto')
+			);
+			$where = array(
+				'kd_investor' => $this->input->post('kd_investor')
+			);
+			$this->Model->update($where,$data,'tb_pendaftaran');
+			redirect('user/profil');
+
 		}
 	
 }
