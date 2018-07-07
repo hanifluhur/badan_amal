@@ -6,7 +6,7 @@
 
 	<?php foreach($query as $u){ ?>	
 	<div class="container" style="margin-top: 40px;" align="center" style="width: 50%;">
-		<?= form_open_multipart('Controller/update_tempat');  ?>
+		<?= form_open_multipart('Admin/update_tempat');  ?>
 		  <fieldset>
 		   <div>
 		           <input class="form-control" placeholder="Kd Tempat" type="text" name="kd_tempat" value="<?php echo $u->kd_tempat ?>" readonly><i style="color: red;"><?= form_error('kd_tempat'); ?></i>
@@ -27,7 +27,7 @@
 		        	  <input class="form-control" type="file" name="gambar" value="<?php echo $u->gambar ?>" >
 		      	</div><br>
 		        <div>
-		        	  <button type="submit" class="btn btn-md btn-info"> Submit <span class="glyphicon glyphicon-floppy-save"></span></button>
+		        	  <button type="submit" class="btn btn-md btn-info"> Update <span class="glyphicon glyphicon-floppy-save"></span></button>
 		      </div>
 		 
 		  </fieldset>

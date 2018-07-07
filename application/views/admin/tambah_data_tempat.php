@@ -11,13 +11,13 @@
 		           <input class="form-control" placeholder="Kd Investor" type="text" name="kd_tempat" value="<?php echo $id_tempat ?>" readonly><i style="color: red;"><?= form_error('kd_tempat'); ?></i>
 		      </div><br>
 		      	<div>
-		           <input class="form-control" placeholder="Nama" type="text" name="nama_tempat"><?= form_error('nama_tempat'); ?></i>
+		           <input class="form-control" placeholder="Nama Tempat" type="text" name="nama_tempat"><?= form_error('nama_tempat'); ?></i>
 		      	</div><br>
 		      	<div>
 		        	  <input class="form-control" placeholder="Alamat" type="text" name="alamat"><?= form_error('alamat'); ?></i>
 		      	</div><br>
 		      	<div>
-		           <input class="form-control" placeholder="Nama" type="text" name="nama_pengurus"><?= form_error('nama_pengurus'); ?></i>
+		           <input class="form-control" placeholder="Nama Pengurus" type="text" name="nama_pengurus"><?= form_error('nama_pengurus'); ?></i>
 		      	</div><br>
 		      	<div>
 		        	  <input class="form-control" placeholder="Telepon" type="text" name="no_tlp"><?= form_error('contact_p'); ?></i>

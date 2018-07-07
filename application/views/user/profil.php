@@ -6,10 +6,10 @@
 
 	<div class="container" style="margin-top: 40px;" align="center" style="width: 50%;">
 		<?php foreach($query as $u){ ?>
-		<?= form_open_multipart('Controller/pendaftaran');  ?>
+		<?= form_open_multipart('User/update_investor');  ?>
 		  <fieldset>
 		   <div>
-		           <input class="form-control" placeholder="Kd Investor" type="text" name="kd_investor"  value="<?php echo $u->kd_investor ?>">
+		           <input class="form-control" placeholder="Kd Investor" type="text" name="kd_investor"  readonly value="<?php echo $u->kd_investor ?>">
 		      </div><br>
 		      	<div>
 		           <input class="form-control" placeholder="Nama" type="text" name="nama_investor" value="<?php echo $u->nama_investor ?>"><i style="color: red;"><?= form_error('nama_investor'); ?></i>
@@ -27,13 +27,10 @@
 		        	  <input class="form-control" placeholder="Password" type="password" name="password" value="<?php echo $u->password ?>"><i style="color: red;"><?= form_error('password'); ?></i>
 		      	</div><br>
 		      	<div>
-			      <select name="level" id="level" class="form-control" style="height: 45px;">
-				      <option value="admin">Admin</option>
-				      <option value="user">User</option>
-			      </select><br>
-			    </div>
+		        	  <input class="form-control" type="text" name="level" readonly value="<?php echo $u->level ?>">
+		      	</div><br>
 			    <div>
-		        	  <input class="form-control" type="text" name="foto" value="<?php echo $u->foto ?>">
+		        	  <input class="form-control" type="file" name="foto" value="<?php echo $u->foto ?>">
 		      	</div><br>
 		        <div>
 		        	  <button type="submit" class="btn btn-md btn-info"> Update <span class="glyphicon glyphicon-floppy-save"></span></button>

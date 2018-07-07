@@ -7,7 +7,7 @@
 		<!--tabel-->
 		<div class="container" style="margin-top: 80px;">
 			<div class="table-responsive">
-				<table id="tabel-data" class="table table-bordered table-striped table-hover">
+				<table id="tabel-investor" class="table table-bordered table-striped table-hover">
 					<thead>
 						<tr>
 							<td>No</td>
@@ -28,8 +28,8 @@
 				  		<tr>
 				  			<td><?php echo $no ?></td>
 				          	<td><?php echo $key->kd_transaksi ?></td> 
-				         	<td><?php echo $key->nama_investor ?></td>
-				         	<td><?php echo $key->nama_tempat?></td> 
+				         	<td><?php echo $key->kd_investor ?></td>
+				         	<td><?php echo $key->kd_tempat?></td> 
 				         	<td><?php echo $key->nominal?></td> 
 				           	<td><?php echo $key->tgl_transaksi?></td>            
 				          	      
@@ -45,4 +45,10 @@
 
 </div>
 </body>
-</html>
+</html
+
+<javascript type="text/javascript">
+	$(document).ready(function(){
+        $('#tabel-investor').DataTable();
+    });
+</javascript>

@@ -11,13 +11,16 @@
         <link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
 
         <!-- Bootsrap -->
-        <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>"
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>">
+
+        <!-- Datatable -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
 
         <!-- Font awesome -->
-        <link rel="stylesheet" href="<?php echo base_url('assets/css/font-awesome.min.css'); ?>"
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/font-awesome.min.css'); ?>">
 
         <!-- Owl carousel -->
-        <link rel="stylesheet" href="<?php echo base_url('assets/css/owl.carousel.css'); ?>"
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/owl.carousel.css'); ?>">
 
         <!-- Template main Css -->
         <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">

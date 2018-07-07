@@ -10,13 +10,18 @@ class Model extends CI_Model {
 	}
  
 	//SELECT=======================================================
-	public function getInvestor(){
+	/*public function getInvestor(){
 		$this->db->select('tb_transaksi.*, tb_pendaftaran.*, tb_tempat.*');
 		$this->db->from('tb_transaksi');
 		$this->db->join('tb_pendaftaran','tb_pendaftaran.kd_investor = tb_transaksi.kd_investor');
 		$this->db->join('tb_tempat','tb_tempat.kd_tempat = tb_transaksi.kd_tempat');
 		$query = $this->db->get();
 		return $query->result();	
+	}*/
+
+	public function getInvestor(){
+		$query = $this->db->get('tb_transaksi');
+		return $query->result();
 	}
 
 	public function getTempat(){
@@ -24,8 +29,9 @@ class Model extends CI_Model {
 		return $query->result();
 	}
 
-	public function getPendaftaran($where,$table){
-		return $this->db->get_where($table,$where);
+	public function getPendaftaran(){
+		$query = $this->db->get('tb_pendaftaran');
+		return $query->result();
 	}
 	public function getLembaga(){
 		return $this->db->get('tb_tempat')->result();
@@ -33,6 +39,7 @@ class Model extends CI_Model {
 	public function getDonasi(){
 		return $this->db->get('tb_transaksi')->result();
 	}
+
 	//UPLOAD======================================================
 	function uploadPelanggan() {
 		$config['upload_path'] = './assets/foto/';
@@ -68,6 +75,8 @@ class Model extends CI_Model {
 		}
 	}
 
+
+
 	//Databases=============================================
 	public function insert($table,$data){
 		$this->db->insert($table,$data);
@@ -96,6 +105,26 @@ class Model extends CI_Model {
 		}
 		$kodemax = str_pad($kode,3,"0",STR_PAD_LEFT);
 		$kodejadi = "AB".$kodemax;
+		return $kodejadi;
+	}
+
+	public function kd_transaksi(){
+		$this->db->select('Right(kd_transaksi,3) as kode',false);
+		$this->db->order_by('kd_transaksi', 'desc');
+		$this->db->limit(1);
+		$query = $this->db->get('tb_transaksi');
+
+		if($query->num_rows()<>0)
+		{
+			$data = $query->row();
+			$kode = intval($data->kode)+1;
+		}
+		else
+		{
+		 	$kode = 1;
+		}
+		$kodemax = str_pad($kode,3,"0",STR_PAD_LEFT);
+		$kodejadi = "AC".$kodemax;
 		return $kodejadi;
 	}
 

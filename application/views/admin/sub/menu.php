@@ -65,7 +65,6 @@
 					<li class="has-child"><a href="#"><b>WELCOME, </b><?php echo $this->session->userdata('nama_investor') ?> <b class="caret"></b></a>
                     
                      <ul class="submenu">
-                         <li class="submenu-item"><a href="<?php echo base_url('User/profil'); ?>">Profil</a></li>
                          <li class="submenu-item" onclick="return confirm('Anda yakin ingin keluar ?')" ><a href="<?php echo base_url('Controller/logout'); ?>">LogOut</a></li>
                       </ul>
                 </ul>

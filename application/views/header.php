@@ -10,6 +10,9 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
 
+        <!-- Datatable -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
+
         <!-- Bootsrap -->
         <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>"
 

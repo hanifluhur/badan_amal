@@ -166,6 +166,10 @@
     <!-- Bootsrap javascript file -->
     <script src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
     
+    <!-- datatable -->
+    <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+
     <!-- owl carouseljavascript file -->
     <script src="<?php echo base_url('assets/js/owl.carousel.min.js'); ?>"></script>
 

@@ -85,18 +85,23 @@
 	}
 
 	public function update_tempat(){
-			$data = array(
-				'nama_tempat' 			=> $this->input->post('nama_tempat'),
-				'alamat' 				=> $this->input->post('alamat'),
-				'nama_pengurus' 		=> $this->input->post('nama_pengurus'),
-				'contact_p' 			=> $this->input->post('contact_p'),
-				'gambar' 				=> $this->input->post('gambar')
-			);
-			$where = array(
-				'kd_tempat' => $this->input->post('kd_tempat')
-			);
-			$this->Model->update($where,$data,'tb_tempat');
-			redirect('admin/datalembaga');
+		$upload = $this->Model->uploadTempat();
+			if ($upload['result'] == "success") {
+				$data = array(
+					'nama_tempat' 			=> $this->input->post('nama_tempat'),
+					'alamat' 				=> $this->input->post('alamat'),
+					'nama_pengurus' 		=> $this->input->post('nama_pengurus'),
+					'contact_p' 			=> $this->input->post('contact_p'),
+					'gambar' 				=> $upload['file']['file_name']);
+				
+				$where = array(
+					'kd_tempat' => $this->input->post('kd_tempat')
+				);
+				$this->Model->update($where,$data,'tb_tempat');
+				redirect('admin/datalembaga');
+				} else {
+				echo "gagal bossssss !!!!";
+			}
 
 		}
 
