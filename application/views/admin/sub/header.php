@@ -3,7 +3,7 @@
 	<head>
 		  <head>
         <meta charset="utf-8">
-        <title>Badan Amal</title>
+        <title>Admin Badan Amal</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Fonts -->

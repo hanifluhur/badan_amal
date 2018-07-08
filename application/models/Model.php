@@ -9,16 +9,6 @@ class Model extends CI_Model {
 		return $this->db->get('tb_pendaftaran')->row();
 	}
  
-	//SELECT=======================================================
-	/*public function getInvestor(){
-		$this->db->select('tb_transaksi.*, tb_pendaftaran.*, tb_tempat.*');
-		$this->db->from('tb_transaksi');
-		$this->db->join('tb_pendaftaran','tb_pendaftaran.kd_investor = tb_transaksi.kd_investor');
-		$this->db->join('tb_tempat','tb_tempat.kd_tempat = tb_transaksi.kd_tempat');
-		$query = $this->db->get();
-		return $query->result();	
-	}*/
-
 	public function getInvestor(){
 		$query = $this->db->get('tb_transaksi');
 		return $query->result();
@@ -169,6 +159,12 @@ class Model extends CI_Model {
 		$this->db->where($where);
 		$this->db->delete($table);
 	}
+
+	public function hapus_investor($where,$table){
+		$this->db->where($where);
+		$this->db->delete($table);
+	}
+	
 	
 
 }

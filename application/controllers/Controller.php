@@ -12,21 +12,24 @@ class Controller extends CI_Controller {
 	{
 		$this->load->view('home');
 	}
-	
-	public function profil()
-	{
-		$this->load->view('profil');	
-	}
+
 	public function sejarah()
 	{
 		$this->load->view('sejarah');	
 	}
+	
 	public function visimisi()
 	{
 		$this->load->view('visimisi');	
 	}
+
+	public function profil()
+	{
+		$this->load->view('profil');	
+	}
+
 	public function halaman_daftar(){
-	//id otomatiss-----------------------------------------------------------
+	//ID OTOMATI===================================================================================================
 		$data['id_pendaftaran'] = $this->Model->kd_investor();
 		$this->load->view('pendaftaran', $data);
 	}
@@ -108,23 +111,6 @@ class Controller extends CI_Controller {
 		}
 	}
 
-	function search_bio(){
-		$search = ($this->input->post("nama_jurusan"))? $this->input->post("nama_jurusan") : "";
-		$search = ($this->uri->segment(3)) ? $this->uri->segment(3) : $search;
-		// pagination settings
-		$config = array();
-		$config['base_url'] = site_url("Controller/search_bio/$search");
-		$config['total_rows'] = $this->Model->get_bio_count($search);
-		$config['per_page'] = "5";
-		$config["uri_segment"] = 4;
-		$choice = $config["total_rows"]/$config["per_page"];
-		$config["num_links"] = floor($choice);
-		$this->pagination->initialize($config);
-		$data['page'] = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
-		$data['query'] = $this->Model->get_bio($config['per_page'], $data['page'], $search);
-		$data['pagination'] = $this->pagination->create_links();
-		$this->load->view('pagination_search',$data);
-	}
 
 
 }

@@ -17,6 +17,7 @@
 					        <td>No Telepon</td>
 					        <td>Level</td>
 					        <td>Foto</td>
+					        <td>Aksi</td>
 
 						</tr>
 					</thead>
@@ -33,7 +34,8 @@
 				         	<td><?php echo $key->alamat ?></td> 
 				         	<td><?php echo $key->no_tlp ?></td> 
 				         	<td><?php echo $key->level ?></td> 
-				           	<td><img class="foto" src="<?php echo base_url('assets/foto/') ?><?php echo $key->foto ?>"></td>        
+				           	<td><img class="foto" src="<?php echo base_url('assets/foto/') ?><?php echo $key->foto ?>"></td>
+				           	<td><center><a href="<?php echo base_url("Admin/hapus_investor/". $key->kd_investor ) ?>" class="btn btn-sm btn-danger active">Hapus</a></td></center> 
 				          	      
 				        </tr>
 				        <?php } ?>

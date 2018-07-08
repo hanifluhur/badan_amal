@@ -142,4 +142,10 @@
 		redirect('admin/datadonasi');
 	}
 
+	public function hapus_investor($kd_investor){
+		$where = array('kd_investor' => $kd_investor);
+		$this->Model->hapus_investor($where,'tb_pendaftaran');
+		redirect('admin/datapendaftaran');
+	}
+
 }

@@ -23,7 +23,7 @@
 		        	  <input class="form-control" placeholder="tgl_transaksi" type="date" name="tgl_transaksi"><?= form_error('tgl_transaksi'); ?></i>
 		      	</div><br>
   				<div>
-		        	  <button type="submit" class="btn btn-md btn-info"> Donasi <span class=""></span></button>
+		        	  <button type="submit" class="btn btn-md btn-info" id="print" onClick="popup_print()"> Donasi <span class=""></span></button>
 		      </div>
 		  </fieldset>
 		</form>

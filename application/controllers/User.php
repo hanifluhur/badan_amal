@@ -36,6 +36,16 @@
 			$data["query"]=$this->Model->getTempat();
 			$this->load->view('user/donasi',$data);
 		}
+		public function donasi_user(){
+			$where = array('kd_investor' => $this->session->userdata('nama_investor'));
+			$data["query"]=$this->Model->get_update($where,'tb_transaksi')->result();
+			$this->load->view('user/donasi-user',$data);
+		}
+		public function prin_user(){
+			$where = array('kd_investor' => $this->session->userdata('nama_investor'));
+			$data["query"]=$this->Model->get_update($where,'tb_transaksi')->result();
+			$this->load->view('user/print',$data);
+		}
 		
 
 		public function transaksi($kd_tempat){
@@ -90,7 +100,7 @@
 		);
 
 		$this->db->insert('tb_transaksi',$dataTransaksi);
-		redirect('User/investor');
+		redirect('User/donasi_user');
 		
 	}
 	

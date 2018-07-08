@@ -19,9 +19,6 @@
               <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
               <input type="password" class="form-control" id="psw" name="pass" placeholder="Enter password">
             </div>
-            <div class="checkbox">
-              <label><input type="checkbox" value="" checked>Remember me</label>
-            </div>
               <button type="submit" name="login" class="btn btn-success btn-md"><span class="glyphicon glyphicon-off"></span> Login</button>
               <button type="submit" class="btn btn-danger btn-default btn-md" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
           </fieldset>
@@ -29,7 +26,7 @@
 
         </div>
         <div class="modal-footer">
-          <p>Not a member? <a href="<?php echo base_url('Controller/halaman_daftar'); ?>">Sign Up</a></p>
+          <p>Belum Punya Akun? <a href="<?php echo base_url('Controller/halaman_daftar'); ?>">Daftar</a></p>
         </div>
       </div>
       
@@ -103,7 +100,7 @@
 
                   <ul class="nav navbar-nav">
 
-                    <li><a class="is-active" <a href="<?php echo base_url('Controller'); ?>">HOME</a></li>
+                    <li><a class="is-active" <a href="<?php echo base_url('Controller'); ?>">BERANDA</a></li>
                      
                     <li class="has-child"><a href="#">PROFIL</a>
                     

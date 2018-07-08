@@ -17,7 +17,7 @@
           <div class="carousel-inner" role="listbox">
 
             <div class="item active">
-
+1
               <img src="assets/images/slider/home-slider-1.jpg" alt="">
 
               <div class="container">
@@ -186,7 +186,7 @@
     
         <div class="container">
 
-            <h2 class="title-style-1">Sponsors <span class="title-under"></span></h2>
+            <h2 class="title-style-1">Sponsor <span class="title-under"></span></h2>
 
             <ul class="owl-carousel list-unstyled list-sponsors">
 

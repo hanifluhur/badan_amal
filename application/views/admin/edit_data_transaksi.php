@@ -15,7 +15,7 @@
 		           <input class="form-control" placeholder="Nama" type="text" name="nama_investor" value="<?php echo $u->kd_investor ?>"><?= form_error('nama_investor'); ?></i>
 		      	</div><br>
 		      	<div>
-		           <input class="form-control" placeholder="Nama" type="text" name="nama_tempat" value="<?php echo $u->kd_tempat ?>"><?= form_error('nama_tempat'); ?></i>
+		           <input class="form-control" placeholder="Nama" type="text" name="nama_tempat" readonly value="<?php echo $u->kd_tempat ?>"><?= form_error('nama_tempat'); ?></i>
 		      	</div><br>
 		      	<div>
 		        	  <input class="form-control" placeholder="Nominal" type="text" name="nominal" value="<?php echo $u->nominal ?>"><?= form_error('nominal'); ?></i>
